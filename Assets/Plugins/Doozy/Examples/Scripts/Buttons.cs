@@ -1,0 +1,38 @@
+﻿using Doozy.Engine.UI;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Doozy.Examples
+{
+    public class Buttons : MonoBehaviour
+    {
+        public Sprite[] sprites;
+        public GameObject buttonPrefab;
+
+        void Start()
+        {
+            GenerateButtons();
+        }
+
+        void Update()
+        {
+
+        }
+
+        void GenerateButtons()
+        {
+            foreach (Sprite sprite in sprites)
+            {
+                GameObject button = Instantiate(buttonPrefab, gameObject.transform.position, Quaternion.identity);
+                button.transform.SetParent(gameObject.transform);
+
+                button.GetComponent<RectTransform>().sizeDelta = new Vector2(gameObject.GetComponent<RectTransform>().sizeDelta.x, gameObject.GetComponent<RectTransform>().sizeDelta.y);
+                button.GetComponent<RectTransform>().localScale = gameObject.GetComponent<RectTransform>().localScale;
+
+                button.GetComponent<RectTransform>().position = new Vector3(gameObject.GetComponent<RectTransform>().position.x / 4, gameObject.GetComponent<RectTransform>().position.y / 4, 0f);
+
+                button.GetComponent<Image>().sprite = sprite;
+            }
+        }
+    }
+}
