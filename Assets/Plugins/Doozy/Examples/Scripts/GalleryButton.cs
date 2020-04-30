@@ -8,6 +8,17 @@ namespace Doozy.Examples
     {
         public GameObject prefabPopup;
         private UIPopup popup;
+        public Sprite imageButton;
+
+        void Start()
+        {
+            imageButton = GetComponent<Image>().sprite;
+
+            if (imageButton == null)
+            {
+                Debug.Log("Error no image found");
+            }
+        }
 
         public void Show()
         {
@@ -15,6 +26,8 @@ namespace Doozy.Examples
 
             if (popup == null)
                 return;
+
+            popup.GetComponent<Popup>().SetImage(imageButton);
 
             popup.HideOnBackButton = false;
             popup.HideOnClickAnywhere = true;
