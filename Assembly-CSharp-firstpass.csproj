@@ -305,6 +305,7 @@
     <Compile Include="Assets\Plugins\Doozy\Engine\Utils\ScriptUtils.cs" />
     <Compile Include="Assets\Plugins\Doozy\Engine\Utils\UILanguagePack.cs" />
     <Compile Include="Assets\Plugins\Doozy\Engine\Utils\UnityResources.cs" />
+    <Compile Include="Assets\Plugins\Doozy\Examples\Scripts\Buttons.cs" />
     <Compile Include="Assets\Plugins\Doozy\Examples\Scripts\E11PopupScriptOne.cs" />
     <Compile Include="Assets\Plugins\Doozy\Examples\Scripts\E11PopupScriptThree.cs" />
     <Compile Include="Assets\Plugins\Doozy\Examples\Scripts\E11PopupScriptTwo.cs" />
