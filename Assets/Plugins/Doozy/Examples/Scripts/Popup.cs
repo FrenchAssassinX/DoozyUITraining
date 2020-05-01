@@ -18,6 +18,7 @@ namespace Doozy.Examples
         {
             imageGameObject = gameObject.transform.GetChild(1).GetChild(0).gameObject;
             imageGameObject.GetComponent<Image>().sprite = pSprite;
+            imageGameObject.GetComponent<Image>().preserveAspect = true;
         }
     }
 }
